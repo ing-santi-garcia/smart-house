@@ -1,4 +1,6 @@
 ---
+import { base } from '../../constants.config';
+
 interface Props {
 	title: string;
 	body: string;
@@ -9,7 +11,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
+	<a href=`${base}/${href}`>
 		<h2>
 			{title}
 			<span>&rarr;</span>
